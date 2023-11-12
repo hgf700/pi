@@ -1,0 +1,14 @@
+C:\Users\USER098\source\repos\projektpi\projektpi\obj\Debug\net6.0\projektpi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER098\source\repos\projektpi\projektpi\obj\Debug\net6.0\projektpi.AssemblyInfoInputs.cache
+C:\Users\USER098\source\repos\projektpi\projektpi\obj\Debug\net6.0\projektpi.AssemblyInfo.cs
+C:\Users\USER098\source\repos\projektpi\projektpi\obj\Debug\net6.0\projektpi.csproj.CoreCompileInputs.cache
+C:\Users\USER098\source\repos\projektpi\projektpi\bin\Debug\net6.0\projektpi.exe
+C:\Users\USER098\source\repos\projektpi\projektpi\bin\Debug\net6.0\projektpi.deps.json
+C:\Users\USER098\source\repos\projektpi\projektpi\bin\Debug\net6.0\projektpi.runtimeconfig.json
+C:\Users\USER098\source\repos\projektpi\projektpi\bin\Debug\net6.0\projektpi.dll
+C:\Users\USER098\source\repos\projektpi\projektpi\bin\Debug\net6.0\projektpi.pdb
+C:\Users\USER098\source\repos\projektpi\projektpi\obj\Debug\net6.0\projektpi.dll
+C:\Users\USER098\source\repos\projektpi\projektpi\obj\Debug\net6.0\refint\projektpi.dll
+C:\Users\USER098\source\repos\projektpi\projektpi\obj\Debug\net6.0\projektpi.pdb
+C:\Users\USER098\source\repos\projektpi\projektpi\obj\Debug\net6.0\projektpi.genruntimeconfig.cache
+C:\Users\USER098\source\repos\projektpi\projektpi\obj\Debug\net6.0\ref\projektpi.dll
