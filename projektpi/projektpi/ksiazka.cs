@@ -8,13 +8,12 @@ namespace projektpi
 {
     internal class Ksiazka
     {
-        //public Guid Id ?
-        public int Id;
-        public string Tytul;
-        public string Autor;
-        public string Wydawca;
-        public string Gatunek;
-        public DateTime DataWydania;
+        public int id;
+        public string tytul;
+        public string autor;
+        public string wydawca;
+        public string gatunek;
+        public DateTime datawydania;
         //public Ksiazka(int id, string t, string a, string w, string g, DateTime data)
         //{
         //    Id = id;

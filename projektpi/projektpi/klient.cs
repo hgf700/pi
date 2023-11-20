@@ -4,18 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/* {"a","a",DateTime,DateTime(2000, 2, 2)*/
 namespace projektpi
 {
-    internal class Klient : Wypozyczenia_zwrot
+    internal class Klient 
     {
-        public string Imie;
-        public string Nazwisko;
-        public DateTime Rok_urodzenia;
-        public string Miejsce_zamieszkania;
-        //public int Ograniczenie = np 15;
-        public DateTime Data_wypozyczenia;
-        public DateTime Data_zwrotu;
+        public int id;
+        public string imie;
+        public string nazwisko;
+        public DateTime rok_urodzenia;
+        public string miejsce_zamieszkania;
+        public int Ograniczenie =  15;
+        List<int> idwypozyczen;
         //public Klient(string i,string n, DateTime ru, string mz,/*Ograniczenie,*/ DateTime dw, DateTime dz)
         //{
         //    Imie = i;

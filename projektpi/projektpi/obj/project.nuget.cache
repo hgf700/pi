@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IZZq0TT0e83YPabz59DIx51UNsJ4to75ZcWVtcO13kuGNCGiw0uwfJ+AxB6zzppwtQBqPzZblr4s02Qe6x3HDQ==",
+  "dgSpecHash": "FiJgkI6a3QI+N749Hrrxd281AZs7MEoE4DWCTaUytU6F2fc6DpGcMy78cqW1I6fVL1bDXOPMGRLowCnJeftsbg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER098\\source\\repos\\projektpi\\projektpi\\projektpi.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\USER098\\Desktop\\pi-main\\pi-main\\projektpi\\projektpi\\projektpi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER098\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

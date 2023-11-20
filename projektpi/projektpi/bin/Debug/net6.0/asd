@@ -1,0 +1,30 @@
+{
+  "klienci": [],
+  "idwypozyczen": [],
+  "ksiazki": [
+    {
+      "id": 1,
+      "tytul": "1",
+      "autor": "1",
+      "wydawca": "1",
+      "gatunek": "1",
+      "datawydania": "1999-01-01T00:00:00"
+    },
+    {
+      "id": 9,
+      "tytul": "tytul",
+      "autor": "autor",
+      "wydawca": "wydawca",
+      "gatunek": "gatunek",
+      "datawydania": "2020-01-01T00:00:00"
+    },
+    {
+      "id": 8,
+      "tytul": "tytul",
+      "autor": "autor",
+      "wydawca": "wydawca",
+      "gatunek": "gatunek",
+      "datawydania": "2020-01-01T00:00:00"
+    }
+  ]
+}
