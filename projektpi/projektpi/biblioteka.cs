@@ -127,7 +127,7 @@ namespace projektpi
                                         id = idklienta,
                                         imie = imie,
                                         nazwisko = nazwisko,
-                                        rok_urodzenia = DateTime.Parse(dataUrodzenia),
+                                        rok_urodzenia = new DateTime(1990, 1, 1),
                                         miejsce_zamieszkania = miejsceZamieszkania
                                     };
                                     biblioteka.dodajklienta(nowyKlient);
@@ -168,11 +168,10 @@ namespace projektpi
                             //break;
                             break;
                         case 3:
-                            //Console.WriteLine("Co chcesz wyswietlic\n");
-                            //Console.WriteLine("1. Klientow\n");
-                            //Console.WriteLine("2. Dostepne ksiazki\n");
-                            //Console.WriteLine("3. Koniec\n");
-                            Console.WriteLine("Wyswietl dane z pliku:\n");
+                            Console.WriteLine("Co chcesz wyswietlic\n");
+                            Console.WriteLine("1. Klientow\n");
+                            Console.WriteLine("2. Dostepne ksiazki\n");
+                            Console.WriteLine("3. Koniec\n");
                             string nazwaPliku1 = Console.ReadLine();
                             Console.WriteLine("Informacje o klientach:\n");
                             Biblioteka odczytanaBiblioteka1 = Biblioteka.OdczytajZPliku(nazwaPliku1);
@@ -181,50 +180,50 @@ namespace projektpi
                             {
                                 Console.WriteLine($"Id: {klientOdczytany.id}, Imię: {klientOdczytany.imie}, Nazwisko: {klientOdczytany.nazwisko}");
                             }
-                            //int n2 = int.Parse(Console.ReadLine());
-                            //bool kontynuuj2 = true;
+                            int n2 = int.Parse(Console.ReadLine());
+                            bool kontynuuj2 = true;
 
-                            //switch (n2)
-                            //{
-                            //    case 1:
-                            //Console.WriteLine("Wyswietl klientow:\n");
-                            //string nazwaPliku1 = Console.ReadLine();
-                            //Biblioteka odczytanaBiblioteka1 = Biblioteka.OdczytajZPliku(nazwaPliku1);
-                            //Console.WriteLine("Odczytane dane z pliku JSON:\n");
-                            //foreach (var klientOdczytany in odczytanaBiblioteka1.klienci)
-                            //{
-                            //    Console.WriteLine($"Id: {klientOdczytany.id}, Imię: {klientOdczytany.imie}, Nazwisko: {klientOdczytany.nazwisko}");
-                            //}
+                            switch (n2)
+                            {
+                                case 1:
+                                    Console.WriteLine("Wyswietl klientow:\n");
+                                    string nazwaPliku2 = Console.ReadLine();
+                                    Biblioteka odczytanaBiblioteka2 = Biblioteka.OdczytajZPliku(nazwaPliku2);
+                                    Console.WriteLine("Odczytane dane z pliku JSON:\n");
+                                    foreach (var klientOdczytany in odczytanaBiblioteka1.klienci)
+                                    {
+                                        Console.WriteLine($"Id: {klientOdczytany.id}, Imię: {klientOdczytany.imie}, Nazwisko: {klientOdczytany.nazwisko}");
+                                    }
+                                    break;
+
+                                case 2:
+                                    Console.WriteLine("Wyswietl dostepne ksiazki:\n");
+                                    string nazwaPliku3 = Console.ReadLine();
+                                    Biblioteka odczytanaBiblioteka3 = Biblioteka.OdczytajZPliku(nazwaPliku3);
+                                    Console.WriteLine("Odczytane dane z pliku JSON:\n");
+                                    foreach (var ksiazkaOdczytany in odczytanaBiblioteka3.ksiazki)
+                                    {
+                                        Console.WriteLine($"Id: {ksiazkaOdczytany.id}, Tytul: {ksiazkaOdczytany.tytul}, Autor: {ksiazkaOdczytany.autor}");
+                                    }
+                                    break;
+
+                                case 3:
+                                    kontynuuj2 = false;
+                                    break;
+
+                                default:
+                                    Console.WriteLine("Nie ma takiej opcji\n");
+                                    break;
+                            }
                             break;
 
-                        //case 2:
-                        //            Console.WriteLine("Wyswietl dostepne ksiazki:\n");
-                        //            string nazwaPliku2 = Console.ReadLine();
-                        //            Biblioteka odczytanaBiblioteka2 = Biblioteka.OdczytajZPliku(nazwaPliku2);
-                        //            Console.WriteLine("Odczytane dane z pliku JSON:\n");
-                        //            foreach (var ksiazkaOdczytany in odczytanaBiblioteka2.ksiazki)
-                        //            {
-                        //                Console.WriteLine($"Id: {ksiazkaOdczytany.id}, Tytul: {ksiazkaOdczytany.tytul}, Autor: {ksiazkaOdczytany.autor}");
-                        //            }
-                        //            break;
+                        case 4:
+                            kontynuuj = false;
+                            break;
 
-                        //        case 3:
-                        //            kontynuuj2 = false;
-                        //            break;
-
-                        //        default:
-                        //            Console.WriteLine("Nie ma takiej opcji\n");
-                        //            break;
-                        //    }
-                        //    break;
-
-                        //case 4:
-                        //    kontynuuj = false;
-                        //    break;
-
-                        //default:
-                        //    Console.WriteLine("Nie ma takiej opcji\n");
-                        //    break;
+                        default:
+                            Console.WriteLine("Nie ma takiej opcji\n");
+                            break;
                     }
                 } while (kontynuuj);
             }
