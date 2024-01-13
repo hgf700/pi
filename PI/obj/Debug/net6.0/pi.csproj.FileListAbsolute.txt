@@ -1,0 +1,17 @@
+C:\Users\USER098\source\repos\pi\pi\obj\Debug\net6.0\pi.csproj.AssemblyReference.cache
+C:\Users\USER098\source\repos\pi\pi\obj\Debug\net6.0\pi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER098\source\repos\pi\pi\obj\Debug\net6.0\pi.AssemblyInfoInputs.cache
+C:\Users\USER098\source\repos\pi\pi\obj\Debug\net6.0\pi.AssemblyInfo.cs
+C:\Users\USER098\source\repos\pi\pi\obj\Debug\net6.0\pi.csproj.CoreCompileInputs.cache
+C:\Users\USER098\source\repos\pi\pi\bin\Debug\net6.0\pi.exe
+C:\Users\USER098\source\repos\pi\pi\bin\Debug\net6.0\pi.deps.json
+C:\Users\USER098\source\repos\pi\pi\bin\Debug\net6.0\pi.runtimeconfig.json
+C:\Users\USER098\source\repos\pi\pi\bin\Debug\net6.0\pi.dll
+C:\Users\USER098\source\repos\pi\pi\bin\Debug\net6.0\pi.pdb
+C:\Users\USER098\source\repos\pi\pi\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\USER098\source\repos\pi\pi\obj\Debug\net6.0\pi.csproj.CopyComplete
+C:\Users\USER098\source\repos\pi\pi\obj\Debug\net6.0\pi.dll
+C:\Users\USER098\source\repos\pi\pi\obj\Debug\net6.0\refint\pi.dll
+C:\Users\USER098\source\repos\pi\pi\obj\Debug\net6.0\pi.pdb
+C:\Users\USER098\source\repos\pi\pi\obj\Debug\net6.0\pi.genruntimeconfig.cache
+C:\Users\USER098\source\repos\pi\pi\obj\Debug\net6.0\ref\pi.dll
