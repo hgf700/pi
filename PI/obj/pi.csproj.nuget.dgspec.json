@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER098\\source\\repos\\pi\\pi\\pi.csproj": {}
+    "C:\\Users\\Pawel\\Documents\\GitHub\\pi\\pi\\pi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER098\\source\\repos\\pi\\pi\\pi.csproj": {
+    "C:\\Users\\Pawel\\Documents\\GitHub\\pi\\pi\\pi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER098\\source\\repos\\pi\\pi\\pi.csproj",
+        "projectUniqueName": "C:\\Users\\Pawel\\Documents\\GitHub\\pi\\pi\\pi.csproj",
         "projectName": "pi",
-        "projectPath": "C:\\Users\\USER098\\source\\repos\\pi\\pi\\pi.csproj",
-        "packagesPath": "C:\\Users\\USER098\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER098\\source\\repos\\pi\\pi\\obj\\",
+        "projectPath": "C:\\Users\\Pawel\\Documents\\GitHub\\pi\\pi\\pi.csproj",
+        "packagesPath": "C:\\Users\\Pawel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pawel\\Documents\\GitHub\\pi\\pi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USER098\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pawel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

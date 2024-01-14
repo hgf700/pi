@@ -12,8 +12,7 @@ namespace pi
         public string nazwisko { get; set; }
         public DateTime rok_urodzenia { get; set; }
         public string miejsce_zamieszkania { get; set; }
-        public int Ograniczenie = 15;
-        public List<int> idwypozyczen { get; set; }
+        public List<int> WypozyczoneKsiazki { get; set; } 
     }
 
 }

@@ -13,29 +13,31 @@ namespace pi
             bool kontynuuj = true;
             do
             {
+                
                 Console.WriteLine("Wybierz 1 z opcji");
                 Console.WriteLine("1. Tworzenie klienta lub ksiazki");
                 Console.WriteLine("2. wypozyczenie");
                 Console.WriteLine("3. Wyświetlenie");
-                Console.WriteLine("4. Zakończ program\n");
+                Console.WriteLine("4. Stwórz raport użytkowania biblioteki");
+                Console.WriteLine("9. Zakończ program\n");
 
                 int n = int.Parse(Console.ReadLine());
-                string nazwaPliku = @"C:\Users\USER098\source\repos\PI\PI\bin\Debug\net6.0\a.txt";
+                string nazwaPliku = @"C:\Users\Pawel\Documents\GitHub\pi\PI\bin\Debug\net6.0\a.txt";
+                Biblioteka biblioteka = new Biblioteka();
                 switch (n)
                 {
                     case 1:
                        
                         
 
-                        Biblioteka biblioteka = new Biblioteka();
-
-                        Console.WriteLine("Co chcesz zrobic");
-                        Console.WriteLine("1. Dodac ksiazke");
-                        Console.WriteLine("2. Dodac klienta");
-                        Console.WriteLine("3. Zakoncz program");
-                        int n1 = int.Parse(Console.ReadLine());
                         
 
+                        Console.WriteLine("Co chcesz zrobic\n");
+                        Console.WriteLine("1. Dodac ksiazke\n");
+                        Console.WriteLine("2. Dodac klienta\n");
+                        Console.WriteLine("3. Zmiana wyboru\n");
+                        int n1 = int.Parse(Console.ReadLine());
+                        
                         switch (n1)
                         {
                             case 1:
@@ -60,20 +62,9 @@ namespace pi
                                     datawydania = new DateTime(1999, 1, 1)
                                 };
                                 biblioteka.dodajksiazke(nowaKsiazka);
-
-                                //Ksiazka ksiazka = new Ksiazka
-                                //{
-                                //    id = 9,
-                                //    tytul = "a",
-                                //    autor = "a",
-                                //    wydawca = "a",
-                                //    gatunek = "a",
-                                //    datawydania = new DateTime(2020, 1, 1)
-                                //};
-                                //biblioteka.dodajksiazke(ksiazka);
                                 biblioteka.ZapiszDoPlikuTekstowego(nazwaPliku);
 
-                                break;
+                                break;                           
                             case 2:
                                 Console.Write("Dodajesz klienta");
                                 Console.Write("ID: ");
@@ -82,8 +73,6 @@ namespace pi
                                 string imie = Console.ReadLine();
                                 Console.Write("Nazwisko: ");
                                 string nazwisko = Console.ReadLine();
-                                Console.Write("Rok urodzenia: ");
-                                string dataUrodzenia = Console.ReadLine();
                                 Console.Write("Miejsce zamieszkania: ");
                                 string miejsceZamieszkania = Console.ReadLine();
                                 Klient nowyKlient = new Klient
@@ -95,21 +84,9 @@ namespace pi
                                     miejsce_zamieszkania = miejsceZamieszkania
                                 };
                                 biblioteka.dodajklienta(nowyKlient);
-
-                                //Klient klient1 = new Klient
-                                //{
-                                //    id = 9,
-                                //    imie = "a",
-                                //    nazwisko = "a",
-                                //    rok_urodzenia = new DateTime(1990, 1, 1),
-                                //    miejsce_zamieszkania = "a"
-                                //};
-                                //biblioteka.dodajklienta(klient1);
                                 biblioteka.ZapiszDoPlikuTekstowego(nazwaPliku);
-
                                 break;
-                            case 3:
-                                
+                            case 3:                                
                                 break;
                             default:
                                 Console.WriteLine("Nie ma tylu opcji");
@@ -118,20 +95,31 @@ namespace pi
                         break;
 
                         case 2:
-                        Console.Write("Wypozyczasz");
-                        Console.Write("ID klienta, który wypozycza: ");
+
+                        
+                        Console.Write("Wypożyczasz");
+                        Console.Write("ID klienta, który wypożycza: ");
                         int idklienta1 = int.Parse(Console.ReadLine());
+                        Console.Write("Jaka ksiazke chcesz wypożyczyć: ");
+                        int idksiazki1 = int.Parse(Console.ReadLine());
+
                         Wypozyczenia_zwrot wypozyczenie = new Wypozyczenia_zwrot
                         {
                             idklienta = idklienta1,
                             Datawypozyczenia = DateTime.Now,
-                            Datazwrotu = DateTime.Now.AddDays(30)
+                            Datazwrotu = DateTime.Now.AddDays(30),
+                            idksiazki = new List<int> { idksiazki1 }
                         };
 
-                        //biblioteka.dodajwypozyczenie(wypozyczenie);
-                        //biblioteka.ZapiszDoPlikuTekstowego(nazwaPliku);
-                        ///*Console.WriteLine($"Dane zostały zapisane do pliku o nazwie: {nazwaPliku1}\n")*/;
-
+                        if (biblioteka.idwypozyczen.Count>=3)
+                        {
+                            Console.WriteLine("nie udalo sie");
+                        }
+                        else
+                        {
+                            biblioteka.DodajWypozyczenie(wypozyczenie);
+                            biblioteka.ZapiszDoPlikuTekstowego(nazwaPliku);
+                        }
                         break;
                         case 3:
                         
@@ -139,12 +127,9 @@ namespace pi
                         Console.WriteLine("Co chcesz wyswietlic\n");
                         Console.WriteLine("1. Klientow\n");
                         Console.WriteLine("2. Dostepne ksiazki\n");
-                        Console.WriteLine("3. Koniec\n");
-
-                        Biblioteka odczytanaBiblioteka1 = Biblioteka.OdczytajZPlikuTekstowego(nazwaPliku);
+                        Console.WriteLine("3. Zmiana wyboru\n");
 
                         int n2 = int.Parse(Console.ReadLine());
-                        bool kontynuuj2 = true;
 
                         switch (n2)
                         {
@@ -152,7 +137,7 @@ namespace pi
                                 Console.WriteLine("Wyswietl klientow:\n");
 
                                 Biblioteka odczytanaBiblioteka2 = Biblioteka.OdczytajZPlikuTekstowego(nazwaPliku);
-                                Console.WriteLine("Odczytane dane z pliku JSON:\n");
+                                Console.WriteLine("Odczytane dane:\n");
                                 foreach (var klientOdczytany in odczytanaBiblioteka2.klienci)
                                 {
                                     Console.WriteLine($"Id: {klientOdczytany.id}, Imię: {klientOdczytany.imie}, Nazwisko: {klientOdczytany.nazwisko}");
@@ -162,7 +147,7 @@ namespace pi
                             case 2:
                                 Console.WriteLine("Wyswietl dostepne ksiazki:\n");
                                 Biblioteka odczytanaBiblioteka3 = Biblioteka.OdczytajZPlikuTekstowego(nazwaPliku);
-                                Console.WriteLine("Odczytane dane z pliku JSON:\n");
+                                Console.WriteLine("Odczytane dane:\n");
                                 foreach (var ksiazkaOdczytany in odczytanaBiblioteka3.ksiazki)
                                 {
                                     Console.WriteLine($"Id: {ksiazkaOdczytany.id}, Tytul: {ksiazkaOdczytany.tytul}, Autor: {ksiazkaOdczytany.autor}");
@@ -170,7 +155,6 @@ namespace pi
                                 break;
 
                             case 3:
-                                kontynuuj2 = false;
                                 break;
 
                             default:
@@ -178,8 +162,8 @@ namespace pi
                                 break;
                         }
                         break;
-
-                    case 4:
+                    
+                    case 9:
                         kontynuuj = false;
                         break;
 

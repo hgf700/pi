@@ -26,9 +26,9 @@ namespace pi
         {
             ksiazki.Add(ksiazka);
         }
-        public void dodajwypozyczonie(Ksiazka wypozyczona)
+        public int IloscKlientow()
         {
-            ksiazki.Add(wypozyczona);
+            return klienci.Count;
         }
 
         public void dodajklienta(Klient klient)
@@ -36,16 +36,17 @@ namespace pi
             klienci.Add(klient);
         }
 
-        public void dodajwypozyczenie(Wypozyczenia_zwrot wypozyczenie)
+        public void DodajWypozyczenie(Wypozyczenia_zwrot wypozyczenie)
         {
+
             idwypozyczen.Add(wypozyczenie);
+
         }
         public void zwrotwypozyczenie(Wypozyczenia_zwrot wypozyczenie)
         {
             idwypozyczen.Remove(wypozyczenie);
             
         }
-
 
         public void ZapiszDoPlikuTekstowego(string nazwaPliku)
         {
@@ -141,7 +142,6 @@ namespace pi
                         Datazwrotu = dataZwrotu,
                         idksiazki = id_ksiazki
                     };
-
                     biblioteka.idwypozyczen.Add(wypozyczenie);
                 }
 
