@@ -14,9 +14,21 @@ namespace pi
         public List<Wypozyczenia_zwrot> idwypozyczen;
         public List<Ksiazka> ksiazki;
 
+        //public int IloscKlientow { get; set; }
+
+        public int IloscKsiazek { get; set; }
+        public int IloscWypozyczen { get; set; }
+        public int IloscKlientow { get; set; }
+
+
+
+
         public Biblioteka()
         {
-            
+
+            IloscKlientow = 0;
+            IloscKsiazek = 0;
+            IloscWypozyczen = 0;
             klienci = new List<Klient>();
             idwypozyczen = new List<Wypozyczenia_zwrot>();
             ksiazki = new List<Ksiazka>();
@@ -25,33 +37,32 @@ namespace pi
         public void dodajksiazke(Ksiazka ksiazka)
         {
             ksiazki.Add(ksiazka);
-        }
-        public void dodajwypozyczonie(Ksiazka wypozyczona)
-        {
-            ksiazki.Add(wypozyczona);
+            IloscKsiazek++;
         }
 
-        public void dodajklienta(Klient klient)
+
+        public void DodajKlienta(Klient klient)
         {
             klienci.Add(klient);
+            // Zwiększ ilość klientów przy dodaniu nowego klienta
+            IloscKlientow++;
         }
-
-        public void dodajwypozyczenie(Wypozyczenia_zwrot wypozyczenie)
+        public void DodajWypozyczenie(Wypozyczenia_zwrot wypozyczenie)
         {
             idwypozyczen.Add(wypozyczenie);
+            IloscWypozyczen++;
         }
+
         public void zwrotwypozyczenie(Wypozyczenia_zwrot wypozyczenie)
         {
             idwypozyczen.Remove(wypozyczenie);
             
         }
 
-
         public void ZapiszDoPlikuTekstowego(string nazwaPliku)
         {
             try
             {
-                // Przygotuj tekstową reprezentację danych
                 StringBuilder sb = new StringBuilder();
 
                 // Dodaj informacje o klientach
@@ -90,15 +101,18 @@ namespace pi
 
                 // Odczytaj dane z pliku
                 string[] lines = File.ReadAllLines(nazwaPliku);
-           
+
             // Parsuj dane i dodawaj do odpowiednich list w obiekcie Biblioteka
             foreach (var line in lines)
+            {
+                if (line.StartsWith("Klient:"))
                 {
-                    if (line.StartsWith("Klient:"))
-                    {
-                    
                     // Przykład parsowania dla klienta
                     string[] klientData = line.Split(new char[] { '=', ',' }, StringSplitOptions.RemoveEmptyEntries);
+
+                    // Sprawdź, czy dane są poprawne, zanim zaczniesz odwoływać się do indeksów
+                    if (klientData.Length >= 6)
+                    {
                         int id = int.Parse(klientData[1]);
                         string imie = klientData[3];
                         string nazwisko = klientData[5];
@@ -106,9 +120,10 @@ namespace pi
                         // Utwórz obiekt klienta i dodaj do listy
                         Klient klient = new Klient { id = id, imie = imie, nazwisko = nazwisko };
                         biblioteka.klienci.Add(klient);
-
+                        biblioteka.IloscKlientow++;
                     }
-                    else if (line.StartsWith("Książka:"))
+                }
+                else if (line.StartsWith("Książka:"))
                     {
                     // Analogicznie dla książki
                     
@@ -119,7 +134,8 @@ namespace pi
 
                         Ksiazka ksiazka = new Ksiazka { id = id, tytul = tytul, autor = autor };
                         biblioteka.ksiazki.Add(ksiazka);
-                    }
+                    biblioteka.IloscKsiazek++;
+                }
                 else if (line.StartsWith("Id klienta:"))
                 {
                     string[] wypozyczeniekaData = line.Split(new char[] { '=', ',' }, StringSplitOptions.RemoveEmptyEntries);
@@ -141,8 +157,8 @@ namespace pi
                         Datazwrotu = dataZwrotu,
                         idksiazki = id_ksiazki
                     };
-
                     biblioteka.idwypozyczen.Add(wypozyczenie);
+                    biblioteka.IloscWypozyczen++;
                 }
 
             }

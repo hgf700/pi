@@ -12,5 +12,6 @@ namespace pi
         public DateTime Datawypozyczenia { get; set; }
         public DateTime Datazwrotu { get; set; }
         public List<int> idksiazki { get; set; }
+        public int Ograniczenie = 2;
     }
 }
