@@ -7,12 +7,12 @@ namespace pi
 {
     public class Klient
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public string imie { get; set; }
         public string nazwisko { get; set; }
         public DateTime rok_urodzenia { get; set; }
         public string miejsce_zamieszkania { get; set; }
-        public List<int> WypozyczoneKsiazki { get; set; } 
+        public List<int> WypozyczoneKsiazki { get; set; }
     }
 
 }

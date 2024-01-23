@@ -7,7 +7,7 @@ namespace pi
 {
     public class Ksiazka
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public string tytul { get; set; }
         public string autor { get; set; }
         public string wydawca { get; set; }

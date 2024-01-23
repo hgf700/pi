@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "NTZyvUDaMnBP7gRQCDD1iXAvQbnaGn2ttJ5lgzehB3bSIl0aQCSQN6Dz657gyadD4YJN7lK9gibZZXQiF8BYTg==",
+  "dgSpecHash": "ushYh6zccP4HEtucRY5z38PnrrMREqGvsxb/QAj+MBporUe9Y1OCyqdbE35ymHPHD+3TZQ92oqq9cdPhjG5qBA==",
   "success": true,
   "projectFilePath": "C:\\Users\\USER098\\Documents\\GitHub\\pi\\pi\\pi.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\USER098\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\USER098\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\USER098\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\USER098\\.nuget\\packages\\system.drawing.common\\8.0.1\\system.drawing.common.8.0.1.nupkg.sha512"
   ],
   "logs": []
 }
