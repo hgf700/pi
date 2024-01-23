@@ -60,11 +60,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER098\\Desktop\\pi-main\\pi\\pi.csproj",
+      "projectUniqueName": "C:\\Users\\USER098\\Documents\\GitHub\\pi\\pi\\pi.csproj",
       "projectName": "pi",
-      "projectPath": "C:\\Users\\USER098\\Desktop\\pi-main\\pi\\pi.csproj",
+      "projectPath": "C:\\Users\\USER098\\Documents\\GitHub\\pi\\pi\\pi.csproj",
       "packagesPath": "C:\\Users\\USER098\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER098\\Desktop\\pi-main\\pi\\obj\\",
+      "outputPath": "C:\\Users\\USER098\\Documents\\GitHub\\pi\\pi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USER098\\AppData\\Roaming\\NuGet\\NuGet.Config",
