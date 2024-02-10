@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER098\\Documents\\GitHub\\pi\\pi\\pi.csproj": {}
+    "C:\\Users\\USER098\\Documents\\GitHub\\PI\\pi\\pi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER098\\Documents\\GitHub\\pi\\pi\\pi.csproj": {
+    "C:\\Users\\USER098\\Documents\\GitHub\\PI\\pi\\pi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER098\\Documents\\GitHub\\pi\\pi\\pi.csproj",
+        "projectUniqueName": "C:\\Users\\USER098\\Documents\\GitHub\\PI\\pi\\pi.csproj",
         "projectName": "pi",
-        "projectPath": "C:\\Users\\USER098\\Documents\\GitHub\\pi\\pi\\pi.csproj",
+        "projectPath": "C:\\Users\\USER098\\Documents\\GitHub\\PI\\pi\\pi.csproj",
         "packagesPath": "C:\\Users\\USER098\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER098\\Documents\\GitHub\\pi\\pi\\obj\\",
+        "outputPath": "C:\\Users\\USER098\\Documents\\GitHub\\PI\\pi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\USER098\\AppData\\Roaming\\NuGet\\NuGet.Config",

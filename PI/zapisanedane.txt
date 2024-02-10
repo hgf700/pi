@@ -1,0 +1,16 @@
+Klient: ID=15, Imię=a, Nazwisko=a
+Książka: ID=1, Tytuł=a, Autor=a
+Książka: ID=2, Tytuł=a, Autor=a
+Książka: ID=3, Tytuł=a, Autor=a
+Książka: ID=9, Tytuł=a, Autor=a
+Klient: ID=1, Imię=a, Nazwisko=a
+Klient: ID=2, Imię=a, Nazwisko=a
+Klient: ID=3, Imię=a, Nazwisko=a
+Klient: ID=9, Imię=a, Nazwisko=a
+Książka: ID=1, Tytuł=a, Autor=a
+Klient: ID=1, Imię=a, Nazwisko=a
+Klient: ID=1, Imię=a, Nazwisko=a
+Książka: ID=1, Tytuł=a, Autor=a dodano przez program
+Książka: ID=1, Tytuł=a, Autor=a dodano przez program
+Id klienta=, Dat awypozyczenia=23.01.2024 23:14:28, Data zwrotu=22.02.2024 23:14:28, Id ksiazki=
+Książka: ID=1, Tytuł=a, Autor=a dodano przez program

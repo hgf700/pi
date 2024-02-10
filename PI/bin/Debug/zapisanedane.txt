@@ -1,0 +1,2 @@
+Książka: ID=1, Tytuł=a, Autor=a
+Książka: ID=1, Tytuł=1, Autor=1 dodano przez program

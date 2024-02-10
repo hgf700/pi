@@ -15,14 +15,9 @@ namespace pi
         public List<Wypozyczenia_zwrot> idwypozyczen;
         public List<Ksiazka> ksiazki;
 
-        //public int IloscKlientow { get; set; }
-
         public int IloscKsiazek { get; set; }
         public int IloscWypozyczen { get; set; }
         public int IloscKlientow { get; set; }
-
-
-
 
         public Biblioteka()
         {
@@ -45,13 +40,18 @@ namespace pi
         public void DodajKlienta(Klient klient)
         {
             klienci.Add(klient);
-            // Zwiększ ilość klientów przy dodaniu nowego klienta
             IloscKlientow++;
         }
-        public void DodajWypozyczenie(Wypozyczenia_zwrot wypozyczenie)
+        public void DodajWypozyczenie(Wypozyczenia_zwrot wypozyczenie, Ksiazka ksiazki)
         {
             idwypozyczen.Add(wypozyczenie);
             IloscWypozyczen++;
+            //moze kiedys jak nie bede wiedzial co robic ze soba
+            // Dodaj warunek sprawdzający, czy książka istnieje w słowniku przed próbą usunięcia
+            //if (ksiazki.ContainsKey(wypozyczenie.ksiazka))
+            //{
+            //    ksiazki.Remove(wypozyczenie.ksiazka, out _); // Usuń książkę na podstawie klucza
+            //}
         }
 
         public void zwrotwypozyczenie(Wypozyczenia_zwrot wypozyczenie)
@@ -69,13 +69,13 @@ namespace pi
                 // Dodaj informacje o klientach
                 foreach (var klient in klienci)
                 {
-                    sb.AppendLine($"Klient: ID={klient.Id}, Imię={klient.imie}, Nazwisko={klient.nazwisko}");
+                    sb.AppendLine($"Klient: ID={klient.Id}, Imię={klient.imie}, Nazwisko={klient.nazwisko} dodano przez program");
                 }
 
                 // Dodaj informacje o książkach
                 foreach (var ksiazka in ksiazki)
                 {
-                    sb.AppendLine($"Książka: ID={ksiazka.Id}, Tytuł={ksiazka.tytul}, Autor={ksiazka.autor}");
+                    sb.AppendLine($"Książka: ID={ksiazka.Id}, Tytuł={ksiazka.tytul}, Autor={ksiazka.autor} dodano przez program");
                 }
 
                 foreach (var wypozyczenie in idwypozyczen)
@@ -170,7 +170,7 @@ namespace pi
                                 Datazwrotu = dataZwrotu,
                                 ksiazka = ksiazka
                             };
-
+                            Console.WriteLine($"Id klienta={wypozyczenie.klient?.Id}, Dat awypozyczenia={wypozyczenie.Datawypozyczenia}, Data zwrotu={wypozyczenie.Datazwrotu}, Id ksiazki={wypozyczenie.ksiazka?.Id}");
                             biblioteka.idwypozyczen.Add(wypozyczenie);
                             biblioteka.IloscWypozyczen++;
                         }
